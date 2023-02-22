@@ -291,27 +291,30 @@ img {
 }
 .customers-list {
   align-items: center;
-  width: calc(100% - 120px / 6);
-  height: 88px;
   gap: 24px;
 }
+.customers-item {
+  flex-basis: calc((100% - 120px) / 6);
+  height: 88px;
+}
 .customers-link {
-  display: inline-block;
-  padding: 16px 32px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  height: 88px;
   width: 100%;
-  height: 100%;
-  fill: var(--customers-color);
+  color: var(--customers-color);
   border: 1px solid var(--customers-color);
   border-radius: 4px;
 }
 .customers-link:hover,
 .customers-link:focus {
-  fill: var(--pressed-state);
-  border: 1px solid var(--pressed-state);
+  color: var(--pressed-state);
+  border-color: 1px solid var(--pressed-state);
 }
-
+.customers-icon {
+  fill: currentColor;
+}
 .container-team {
   flex-direction: column;
   justify-content: center;
@@ -418,7 +421,6 @@ img {
 }
 .container-element {
   padding: 32px 0px;
-  margin-left: 16px;
 }
 .primary-button .button-element:not(:last-child) {
   margin-right: 24px;
@@ -430,13 +432,12 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-right: -24px;
-  margin-top: -48px;
   margin-top: 72px;
+  margin-bottom: -48px;
 }
 .flex-element {
-  width: 360px;
   margin-right: 24px;
-  margin-top: 48px;
+  margin-bottom: 48px;
 }
 .flex-element:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
